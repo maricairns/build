@@ -46,6 +46,9 @@
     border-bottom: 1px solid var(--border);
     flex-shrink: 0;
     height: 44px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
   }
 
   .tab {
@@ -71,17 +74,17 @@
   /* ── MAIN CONTENT ── */
   .main {
     flex: 1;
-    overflow: hidden;
-    padding: 16px 8vw 12px 8vw;
+    overflow: visible;
+    padding: 40px 8vw 40px 8vw;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     position: relative;
   }
 
   .logo-corner {
     position: absolute;
-    top: 16px;
+    top: 40px;
     right: 8vw;
     width: 76px;
     height: 76px;
@@ -175,6 +178,9 @@
     padding: 0 8vw;
     height: 36px;
     flex-shrink: 0;
+    position: sticky;
+    bottom: 0;
+    z-index: 10;
   }
 
   .status-l,
@@ -380,36 +386,36 @@
     <img src="https://maricairns.github.io/logo.png" alt="Human Factors in AI" class="logo-corner">
     <div class="code-block" id="code">
 
-      <span class="line c" data-delay="600"># Keeping AI From Going Rogue</span>
+      <span class="line c" data-delay="400"># Keeping AI From Going Rogue</span>
       <span class="gap-md"></span>
-      <span class="line c" data-delay="1200"># Dr Mari Cairns</span>
-      <span class="line c" data-delay="1800"># DClinPsych (University of Oxford) CPsychol AFBPsS MBA</span>
+      <span class="line c" data-delay="800"># Dr Mari Cairns</span>
+      <span class="line c" data-delay="1200"># DClinPsych (University of Oxford) CPsychol AFBPsS MBA</span>
       <span class="gap-md"></span>
-      <span class="line" data-delay="2600"><span class="y">print</span><span class="w">(&#34;</span><span class="y">Helping AI Models Steer Clear of Shady Stuff</span><span class="w">&#34;)</span></span>
+      <span class="line" data-delay="1800"><span class="y">print</span><span class="w">(&#34;</span><span class="y">Helping AI Models Steer Clear of Shady Stuff</span><span class="w">&#34;)</span></span>
       <span class="gap-md"></span>
-      <span class="line" data-delay="3600"><span class="y">def</span> <span class="w">build_safe_ai</span><span class="y">():</span></span>
-      <span class="line" data-delay="4100"><span class="w">    focus </span><span class="y">=</span><span class="w"> [</span></span>
-      <span class="line" data-delay="4500"><span class="w">        &#34;</span><span class="w">AI Model Behaviour</span><span class="w">&#34;,</span></span>
-      <span class="line" data-delay="4900"><span class="w">        &#34;</span><span class="w">AI Model Personality</span><span class="w">&#34;,</span></span>
-      <span class="line" data-delay="5300"><span class="w">        &#34;</span><span class="w">AI Model (meta)Cognition</span><span class="w">&#34;</span></span>
-      <span class="line" data-delay="5700"><span class="w">    ]</span></span>
+      <span class="line" data-delay="2500"><span class="y">def</span> <span class="w">build_safe_ai</span><span class="y">():</span></span>
+      <span class="line" data-delay="2900"><span class="w">    focus </span><span class="y">=</span><span class="w"> [</span></span>
+      <span class="line" data-delay="3200"><span class="w">        &#34;</span><span class="w">AI Model Behaviour</span><span class="w">&#34;,</span></span>
+      <span class="line" data-delay="3500"><span class="w">        &#34;</span><span class="w">AI Model Personality</span><span class="w">&#34;,</span></span>
+      <span class="line" data-delay="3800"><span class="w">        &#34;</span><span class="w">AI Model (meta)Cognition</span><span class="w">&#34;</span></span>
+      <span class="line" data-delay="4100"><span class="w">    ]</span></span>
       <span class="gap-md"></span>
-      <span class="line c" data-delay="6400"># My career focus is to apply psychology and human factors expertise to helping make AI go well.</span>
+      <span class="line c" data-delay="4600"># My career focus is to apply psychology and human factors expertise to helping make AI go well.</span>
       <span class="gap-sm"></span>
-      <span class="line c" data-delay="7000"># I believe human factors domain expertise is vital at the source of the river.</span>
-      <span class="line c" data-delay="7600"># Where AI models are built. Where AI is trained, fine-tuned, aligned, evaluated, blue-teamed, red-teamed (and black-teamed), and stress-tested.</span>
+      <span class="line c" data-delay="5000"># I believe human factors domain expertise is vital at the source of the river.</span>
+      <span class="line c" data-delay="5400"># Where AI models are built. Where AI is trained, fine-tuned, aligned, evaluated, blue-teamed, red-teamed (and black-teamed), and stress-tested.</span>
       <span class="gap-sm"></span>
-      <span class="line c" data-delay="8400"># Especially when it comes to emerging misalignment, alignment faking, and hidden objectives in AI models. In particular, where AI models display behaviours that align with dark triad characteristics and personality traits. To help account for these AI model behaviours before deployment — and the more covert, dormant-over-time, hidden objectives that may only manifest after deployment, with time-lags.</span>
+      <span class="line c" data-delay="5900"># Especially when it comes to emerging misalignment, alignment faking, and hidden objectives in AI models. In particular, where AI models display behaviours that align with dark triad characteristics and personality traits. To help account for these AI model behaviours before deployment — and the more covert, dormant-over-time, hidden objectives that may only manifest after deployment, with time-lags.</span>
       <span class="gap-sm"></span>
-      <span class="line c" data-delay="9600"># As AI systems scale and become increasingly powerful, getting this right becomes existential.</span>
+      <span class="line c" data-delay="6700"># As AI systems scale and become increasingly powerful, getting this right becomes existential.</span>
       <span class="gap-md"></span>
-      <span class="line" data-delay="10400"><span class="y">print</span><span class="w">(&#34;</span><span class="y">We Are Building AI For 8.28+ Billion Humans.</span><span class="w">&#34;)</span></span>
-      <span class="line" data-delay="11000"><span class="y">print</span><span class="w">(&#34;</span><span class="y">How We Build AI Matters. How We Use AI Matters.</span><span class="w">&#34;)</span></span>
-      <span class="line" data-delay="11600"><span class="y">print</span><span class="w">(&#34;</span><span class="y">Open to Building Safe AI.</span><span class="w">&#34;)</span></span>
+      <span class="line" data-delay="7300"><span class="y">print</span><span class="w">(&#34;</span><span class="y">We Are Building AI For 8.28+ Billion Humans.</span><span class="w">&#34;)</span></span>
+      <span class="line" data-delay="7700"><span class="y">print</span><span class="w">(&#34;</span><span class="y">How We Build AI Matters. How We Use AI Matters.</span><span class="w">&#34;)</span></span>
+      <span class="line" data-delay="8100"><span class="y">print</span><span class="w">(&#34;</span><span class="y">Open to Building Safe AI.</span><span class="w">&#34;)</span></span>
       <span class="gap-md"></span>
-      <span class="line c" data-delay="12200"># people · processes · data · technology</span>
+      <span class="line c" data-delay="8500"># people · processes · data · technology</span>
       <span class="gap-md"></span>
-      <span class="line" data-delay="12800"><span class="y">&gt;&gt;&gt;</span> <span class="cursor" id="cursor"></span></span>
+      <span class="line" data-delay="8900"><span class="y">&gt;&gt;&gt;</span> <span class="cursor" id="cursor"></span></span>
 
     </div>
 
