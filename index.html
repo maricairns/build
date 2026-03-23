@@ -607,9 +607,9 @@
     btn.style.cursor = 'default';
 
     setTimeout(function() {
-      window.location.href = 'mailto:mari.cairns@gmail.com'
+      window.open('mailto:mari.cairns@gmail.com'
         + '?subject=' + encodeURIComponent(subject)
-        + '&body=' + encodeURIComponent(body);
+        + '&body=' + encodeURIComponent(body));
 
       btn.textContent = '[ \u2713 done ]';
       btn.style.borderColor = '#e2e2e2';
