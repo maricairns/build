@@ -29,6 +29,14 @@
     overflow: hidden;
   }
 
+  @media (max-height: 800px) {
+    .line { font-size: 11px !important; line-height: 1.7 !important; }
+    .gap-sm { height: 4px !important; }
+    .gap-md { height: 8px !important; }
+    .main { padding: 24px 10vw 16px 10vw !important; }
+    .cta-row { margin-top: 12px !important; }
+  }
+
   /* ── LAYOUT ── */
   .ide {
     display: flex;
@@ -78,7 +86,7 @@
   .main {
     flex: 1;
     overflow: hidden;
-    padding: 48px 10vw 32px 10vw;
+    padding: 28px 10vw 20px 10vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -91,8 +99,8 @@
   }
 
   .line {
-    font-size: clamp(11px, 1.1vw, 14px);
-    line-height: 1.85;
+    font-size: clamp(10px, 0.95vw, 13px);
+    line-height: 1.75;
     white-space: pre;
     opacity: 0;
     transition: opacity 0.05s;
@@ -100,8 +108,8 @@
 
   .line.visible { opacity: 1; }
 
-  .gap-sm { height: clamp(6px, 0.8vh, 12px); }
-  .gap-md { height: clamp(10px, 1.2vh, 18px); }
+  .gap-sm { height: clamp(4px, 0.5vh, 7px); }
+  .gap-md { height: clamp(6px, 0.8vh, 12px); }
 
   .c  { color: var(--comment); }
   .y  { color: var(--yellow); }
@@ -129,7 +137,7 @@
   .cta-row {
     display: flex;
     gap: 16px;
-    margin-top: clamp(16px, 2vh, 28px);
+    margin-top: clamp(10px, 1.5vh, 20px);
     opacity: 0;
     transform: translateY(6px);
     transition: opacity 0.4s ease, transform 0.4s ease;
@@ -358,8 +366,7 @@
   <!-- TAB BAR -->
   <div class="tab-bar">
     <div class="tab">
-      <img src="https://maricairns.github.io/logo.png" alt="Human Factors in AI" onerror="this.style.display='none';document.querySelector('.tab-dot').style.display='flex';">
-      <div class="tab-dot" style="display:none;"></div>
+      <img src="https://maricairns.github.io/logo.png" alt="Human Factors in AI" style="width:20px;height:20px;object-fit:contain;">
       <span>mari_cairns</span>
     </div>
   </div>
@@ -368,43 +375,43 @@
   <div class="main">
     <div class="code-block" id="code">
 
-      <span class="line c" data-delay="0"># Keeping AI From Going Rogue</span>
+      <span class="line c" data-delay="300"># Keeping AI From Going Rogue</span>
       <span class="gap-md"></span>
-      <span class="line c" data-delay="120"># Dr Mari Cairns</span>
-      <span class="line c" data-delay="200"># DClinPsych (University of Oxford) CPsychol AFBPsS MBA</span>
+      <span class="line c" data-delay="600"># Dr Mari Cairns</span>
+      <span class="line c" data-delay="900"># DClinPsych (University of Oxford) CPsychol AFBPsS MBA</span>
       <span class="gap-md"></span>
-      <span class="line" data-delay="340"><span class="y">print</span><span class="w">(&#34;</span><span class="y">Helping AI Models Steer Clear of Shady Stuff</span><span class="w">&#34;)</span></span>
+      <span class="line" data-delay="1300"><span class="y">print</span><span class="w">(&#34;</span><span class="y">Helping AI Models Steer Clear of Shady Stuff</span><span class="w">&#34;)</span></span>
       <span class="gap-md"></span>
-      <span class="line" data-delay="520"><span class="y">def</span> <span class="w">build_safe_ai</span><span class="y">():</span></span>
-      <span class="line" data-delay="600"><span class="w">    focus </span><span class="y">=</span><span class="w"> [</span></span>
-      <span class="line" data-delay="680"><span class="w">        &#34;</span><span class="w">AI Model Behaviour</span><span class="w">&#34;,</span></span>
-      <span class="line" data-delay="760"><span class="w">        &#34;</span><span class="w">AI Model Personality</span><span class="w">&#34;,</span></span>
-      <span class="line" data-delay="840"><span class="w">        &#34;</span><span class="w">AI Model (meta)Cognition</span><span class="w">&#34;</span></span>
-      <span class="line" data-delay="920"><span class="w">    ]</span></span>
+      <span class="line" data-delay="1800"><span class="y">def</span> <span class="w">build_safe_ai</span><span class="y">():</span></span>
+      <span class="line" data-delay="2050"><span class="w">    focus </span><span class="y">=</span><span class="w"> [</span></span>
+      <span class="line" data-delay="2250"><span class="w">        &#34;</span><span class="w">AI Model Behaviour</span><span class="w">&#34;,</span></span>
+      <span class="line" data-delay="2450"><span class="w">        &#34;</span><span class="w">AI Model Personality</span><span class="w">&#34;,</span></span>
+      <span class="line" data-delay="2650"><span class="w">        &#34;</span><span class="w">AI Model (meta)Cognition</span><span class="w">&#34;</span></span>
+      <span class="line" data-delay="2850"><span class="w">    ]</span></span>
       <span class="gap-md"></span>
-      <span class="line c" data-delay="1060"># My career focus is to apply psychology and human factors expertise to helping make AI go well.</span>
+      <span class="line c" data-delay="3200"># My career focus is to apply psychology and human factors expertise to helping make AI go well.</span>
       <span class="gap-sm"></span>
-      <span class="line c" data-delay="1180"># I believe human factors domain expertise is vital at the source of the river.</span>
-      <span class="line c" data-delay="1260"># Where AI models are built. Where AI is trained, fine-tuned, aligned, evaluated,</span>
-      <span class="line c" data-delay="1340"># blue-teamed, red-teamed (and black-teamed), and stress-tested.</span>
+      <span class="line c" data-delay="3500"># I believe human factors domain expertise is vital at the source of the river.</span>
+      <span class="line c" data-delay="3750"># Where AI models are built. Where AI is trained, fine-tuned, aligned, evaluated,</span>
+      <span class="line c" data-delay="4000"># blue-teamed, red-teamed (and black-teamed), and stress-tested.</span>
       <span class="gap-sm"></span>
-      <span class="line c" data-delay="1460"># Especially when it comes to emerging misalignment, alignment faking,</span>
-      <span class="line c" data-delay="1540"># and hidden objectives in AI models.</span>
+      <span class="line c" data-delay="4300"># Especially when it comes to emerging misalignment, alignment faking,</span>
+      <span class="line c" data-delay="4550"># and hidden objectives in AI models.</span>
       <span class="gap-sm"></span>
-      <span class="line c" data-delay="1660"># In particular, where AI models display behaviours that align with dark triad characteristics</span>
-      <span class="line c" data-delay="1740"># and personality traits. To help account for these AI model behaviours before deployment —</span>
-      <span class="line c" data-delay="1820"># and the more covert, dormant-over-time, hidden objectives that may only manifest</span>
-      <span class="line c" data-delay="1900"># after deployment, with time-lags.</span>
+      <span class="line c" data-delay="4850"># In particular, where AI models display behaviours that align with dark triad characteristics</span>
+      <span class="line c" data-delay="5100"># and personality traits. To help account for these AI model behaviours before deployment —</span>
+      <span class="line c" data-delay="5350"># and the more covert, dormant-over-time, hidden objectives that may only manifest</span>
+      <span class="line c" data-delay="5600"># after deployment, with time-lags.</span>
       <span class="gap-sm"></span>
-      <span class="line c" data-delay="2020"># As AI systems scale and become increasingly powerful, getting this right becomes existential.</span>
+      <span class="line c" data-delay="5900"># As AI systems scale and become increasingly powerful, getting this right becomes existential.</span>
       <span class="gap-md"></span>
-      <span class="line" data-delay="2180"><span class="y">print</span><span class="w">(&#34;</span><span class="y">We Are Building AI For 8.28+ Billion Humans.</span><span class="w">&#34;)</span></span>
-      <span class="line" data-delay="2280"><span class="y">print</span><span class="w">(&#34;</span><span class="y">How We Build AI Matters. How We Use AI Matters.</span><span class="w">&#34;)</span></span>
-      <span class="line" data-delay="2380"><span class="y">print</span><span class="w">(&#34;</span><span class="y">Open to Building Safe AI.</span><span class="w">&#34;)</span></span>
+      <span class="line" data-delay="6300"><span class="y">print</span><span class="w">(&#34;</span><span class="y">We Are Building AI For 8.28+ Billion Humans.</span><span class="w">&#34;)</span></span>
+      <span class="line" data-delay="6600"><span class="y">print</span><span class="w">(&#34;</span><span class="y">How We Build AI Matters. How We Use AI Matters.</span><span class="w">&#34;)</span></span>
+      <span class="line" data-delay="6900"><span class="y">print</span><span class="w">(&#34;</span><span class="y">Open to Building Safe AI.</span><span class="w">&#34;)</span></span>
       <span class="gap-md"></span>
-      <span class="line c" data-delay="2520"># people · processes · data · technology</span>
+      <span class="line c" data-delay="7200"># people · processes · data · technology</span>
       <span class="gap-md"></span>
-      <span class="line" data-delay="2640"><span class="y">&gt;&gt;&gt;</span> <span class="cursor" id="cursor"></span></span>
+      <span class="line" data-delay="7500"><span class="y">&gt;&gt;&gt;</span> <span class="cursor" id="cursor"></span></span>
 
     </div>
 
