@@ -75,7 +75,7 @@
   .main {
     flex: 1;
     overflow: visible;
-    padding: 12px 8vw 12px 8vw;
+    padding: 40px 8vw 8px 8vw;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -84,13 +84,13 @@
 
   .logo-corner {
     position: absolute;
-    top: 12px;
+    top: 40px;
     right: 8vw;
-    width: 76px;
-    height: 76px;
+    width: 260px;
+    height: 260px;
     object-fit: contain;
     border: 1px solid var(--border);
-    padding: 6px;
+    padding: 10px;
     background: var(--tab-bg);
   }
 
@@ -98,16 +98,16 @@
     display: flex;
     flex-direction: column;
     gap: 0;
+    max-width: calc(100% - 300px);
   }
 
   .line {
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1.55;
     white-space: pre-wrap;
     word-break: break-word;
     opacity: 0;
     transition: opacity 0.05s;
-    padding-right: 100px;
   }
 
   .line.visible { opacity: 1; }
