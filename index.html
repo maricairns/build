@@ -26,14 +26,14 @@
     height: 100%;
     background: var(--bg);
     font-family: var(--mono);
-    overflow: hidden;
+    overflow-y: auto;
   }
 
   /* ── LAYOUT ── */
   .ide {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
     background: var(--bg);
   }
@@ -72,7 +72,7 @@
   .main {
     flex: 1;
     overflow: hidden;
-    padding: 24px 8vw 16px 8vw;
+    padding: 16px 8vw 12px 8vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -81,10 +81,10 @@
 
   .logo-corner {
     position: absolute;
-    top: 24px;
+    top: 16px;
     right: 8vw;
-    width: 80px;
-    height: 80px;
+    width: 76px;
+    height: 76px;
     object-fit: contain;
     border: 1px solid var(--border);
     padding: 6px;
@@ -99,18 +99,18 @@
 
   .line {
     font-size: 14px;
-    line-height: 1.75;
+    line-height: 1.65;
     white-space: pre-wrap;
     word-break: break-word;
     opacity: 0;
     transition: opacity 0.05s;
-    padding-right: 110px;
+    padding-right: 100px;
   }
 
   .line.visible { opacity: 1; }
 
-  .gap-sm { height: 5px; display: block; }
-  .gap-md { height: 10px; display: block; }
+  .gap-sm { height: 4px; display: block; }
+  .gap-md { height: 8px; display: block; }
 
   .c  { color: var(--comment); }
   .y  { color: var(--yellow); }
@@ -138,7 +138,7 @@
   .cta-row {
     display: flex;
     gap: 16px;
-    margin-top: 16px;
+    margin-top: 10px;
     opacity: 0;
     transform: translateY(6px);
     transition: opacity 0.4s ease, transform 0.4s ease;
@@ -380,36 +380,36 @@
     <img src="https://maricairns.github.io/logo.png" alt="Human Factors in AI" class="logo-corner">
     <div class="code-block" id="code">
 
-      <span class="line c" data-delay="300"># Keeping AI From Going Rogue</span>
+      <span class="line c" data-delay="600"># Keeping AI From Going Rogue</span>
       <span class="gap-md"></span>
-      <span class="line c" data-delay="600"># Dr Mari Cairns</span>
-      <span class="line c" data-delay="900"># DClinPsych (University of Oxford) CPsychol AFBPsS MBA</span>
+      <span class="line c" data-delay="1200"># Dr Mari Cairns</span>
+      <span class="line c" data-delay="1800"># DClinPsych (University of Oxford) CPsychol AFBPsS MBA</span>
       <span class="gap-md"></span>
-      <span class="line" data-delay="1300"><span class="y">print</span><span class="w">(&#34;</span><span class="y">Helping AI Models Steer Clear of Shady Stuff</span><span class="w">&#34;)</span></span>
+      <span class="line" data-delay="2600"><span class="y">print</span><span class="w">(&#34;</span><span class="y">Helping AI Models Steer Clear of Shady Stuff</span><span class="w">&#34;)</span></span>
       <span class="gap-md"></span>
-      <span class="line" data-delay="1800"><span class="y">def</span> <span class="w">build_safe_ai</span><span class="y">():</span></span>
-      <span class="line" data-delay="2050"><span class="w">    focus </span><span class="y">=</span><span class="w"> [</span></span>
-      <span class="line" data-delay="2250"><span class="w">        &#34;</span><span class="w">AI Model Behaviour</span><span class="w">&#34;,</span></span>
-      <span class="line" data-delay="2450"><span class="w">        &#34;</span><span class="w">AI Model Personality</span><span class="w">&#34;,</span></span>
-      <span class="line" data-delay="2650"><span class="w">        &#34;</span><span class="w">AI Model (meta)Cognition</span><span class="w">&#34;</span></span>
-      <span class="line" data-delay="2850"><span class="w">    ]</span></span>
+      <span class="line" data-delay="3600"><span class="y">def</span> <span class="w">build_safe_ai</span><span class="y">():</span></span>
+      <span class="line" data-delay="4100"><span class="w">    focus </span><span class="y">=</span><span class="w"> [</span></span>
+      <span class="line" data-delay="4500"><span class="w">        &#34;</span><span class="w">AI Model Behaviour</span><span class="w">&#34;,</span></span>
+      <span class="line" data-delay="4900"><span class="w">        &#34;</span><span class="w">AI Model Personality</span><span class="w">&#34;,</span></span>
+      <span class="line" data-delay="5300"><span class="w">        &#34;</span><span class="w">AI Model (meta)Cognition</span><span class="w">&#34;</span></span>
+      <span class="line" data-delay="5700"><span class="w">    ]</span></span>
       <span class="gap-md"></span>
-      <span class="line c" data-delay="3200"># My career focus is to apply psychology and human factors expertise to helping make AI go well.</span>
+      <span class="line c" data-delay="6400"># My career focus is to apply psychology and human factors expertise to helping make AI go well.</span>
       <span class="gap-sm"></span>
-      <span class="line c" data-delay="3500"># I believe human factors domain expertise is vital at the source of the river.</span>
-      <span class="line c" data-delay="3800"># Where AI models are built. Where AI is trained, fine-tuned, aligned, evaluated, blue-teamed, red-teamed (and black-teamed), and stress-tested.</span>
+      <span class="line c" data-delay="7000"># I believe human factors domain expertise is vital at the source of the river.</span>
+      <span class="line c" data-delay="7600"># Where AI models are built. Where AI is trained, fine-tuned, aligned, evaluated, blue-teamed, red-teamed (and black-teamed), and stress-tested.</span>
       <span class="gap-sm"></span>
-      <span class="line c" data-delay="4200"># Especially when it comes to emerging misalignment, alignment faking, and hidden objectives in AI models. In particular, where AI models display behaviours that align with dark triad characteristics and personality traits. To help account for these AI model behaviours before deployment — and the more covert, dormant-over-time, hidden objectives that may only manifest after deployment, with time-lags.</span>
+      <span class="line c" data-delay="8400"># Especially when it comes to emerging misalignment, alignment faking, and hidden objectives in AI models. In particular, where AI models display behaviours that align with dark triad characteristics and personality traits. To help account for these AI model behaviours before deployment — and the more covert, dormant-over-time, hidden objectives that may only manifest after deployment, with time-lags.</span>
       <span class="gap-sm"></span>
-      <span class="line c" data-delay="4800"># As AI systems scale and become increasingly powerful, getting this right becomes existential.</span>
+      <span class="line c" data-delay="9600"># As AI systems scale and become increasingly powerful, getting this right becomes existential.</span>
       <span class="gap-md"></span>
-      <span class="line" data-delay="5200"><span class="y">print</span><span class="w">(&#34;</span><span class="y">We Are Building AI For 8.28+ Billion Humans.</span><span class="w">&#34;)</span></span>
-      <span class="line" data-delay="5500"><span class="y">print</span><span class="w">(&#34;</span><span class="y">How We Build AI Matters. How We Use AI Matters.</span><span class="w">&#34;)</span></span>
-      <span class="line" data-delay="5800"><span class="y">print</span><span class="w">(&#34;</span><span class="y">Open to Building Safe AI.</span><span class="w">&#34;)</span></span>
+      <span class="line" data-delay="10400"><span class="y">print</span><span class="w">(&#34;</span><span class="y">We Are Building AI For 8.28+ Billion Humans.</span><span class="w">&#34;)</span></span>
+      <span class="line" data-delay="11000"><span class="y">print</span><span class="w">(&#34;</span><span class="y">How We Build AI Matters. How We Use AI Matters.</span><span class="w">&#34;)</span></span>
+      <span class="line" data-delay="11600"><span class="y">print</span><span class="w">(&#34;</span><span class="y">Open to Building Safe AI.</span><span class="w">&#34;)</span></span>
       <span class="gap-md"></span>
-      <span class="line c" data-delay="6100"># people · processes · data · technology</span>
+      <span class="line c" data-delay="12200"># people · processes · data · technology</span>
       <span class="gap-md"></span>
-      <span class="line" data-delay="6400"><span class="y">&gt;&gt;&gt;</span> <span class="cursor" id="cursor"></span></span>
+      <span class="line" data-delay="12800"><span class="y">&gt;&gt;&gt;</span> <span class="cursor" id="cursor"></span></span>
 
     </div>
 
