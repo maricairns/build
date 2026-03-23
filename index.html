@@ -29,14 +29,6 @@
     overflow: hidden;
   }
 
-  @media (max-height: 800px) {
-    .line { font-size: 11px !important; line-height: 1.7 !important; }
-    .gap-sm { height: 4px !important; }
-    .gap-md { height: 8px !important; }
-    .main { padding: 24px 10vw 16px 10vw !important; }
-    .cta-row { margin-top: 12px !important; }
-  }
-
   /* ── LAYOUT ── */
   .ide {
     display: flex;
@@ -53,31 +45,24 @@
     align-items: center;
     border-bottom: 1px solid var(--border);
     flex-shrink: 0;
-    height: 38px;
-    padding-right: 20px;
+    height: 44px;
   }
 
   .tab {
     display: flex;
     align-items: center;
-    gap: 8px;
-    padding: 0 20px;
+    gap: 10px;
+    padding: 0 24px;
     height: 100%;
     background: var(--bg);
     border-right: 1px solid var(--border);
-    font-size: 12px;
+    font-size: 15px;
     color: var(--body);
   }
 
-  .tab img {
-    width: 16px;
-    height: 16px;
-    object-fit: contain;
-  }
-
   .tab-dot {
-    width: 6px;
-    height: 6px;
+    width: 8px;
+    height: 8px;
     background: var(--yellow);
     border-radius: 50%;
     flex-shrink: 0;
@@ -87,7 +72,7 @@
   .main {
     flex: 1;
     overflow: hidden;
-    padding: 28px 10vw 20px 10vw;
+    padding: 40px 8vw 24px 8vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -96,12 +81,14 @@
 
   .logo-corner {
     position: absolute;
-    top: 28px;
-    right: 10vw;
-    width: clamp(48px, 5vw, 72px);
-    height: clamp(48px, 5vw, 72px);
+    top: 32px;
+    right: 8vw;
+    width: 90px;
+    height: 90px;
     object-fit: contain;
-    opacity: 0.9;
+    border: 1px solid var(--border);
+    padding: 6px;
+    background: var(--tab-bg);
   }
 
   .code-block {
@@ -111,17 +98,19 @@
   }
 
   .line {
-    font-size: clamp(12px, 1.05vw, 16px);
-    line-height: 1.85;
-    white-space: nowrap;
+    font-size: 17px;
+    line-height: 1.9;
+    white-space: pre-wrap;
+    word-break: break-word;
     opacity: 0;
     transition: opacity 0.05s;
+    padding-right: 120px;
   }
 
   .line.visible { opacity: 1; }
 
-  .gap-sm { height: clamp(4px, 0.6vh, 8px); }
-  .gap-md { height: clamp(8px, 1vh, 14px); }
+  .gap-sm { height: 8px; display: block; }
+  .gap-md { height: 16px; display: block; }
 
   .c  { color: var(--comment); }
   .y  { color: var(--yellow); }
@@ -130,8 +119,8 @@
   /* ── CURSOR ── */
   .cursor {
     display: inline-block;
-    width: clamp(7px, 0.6vw, 9px);
-    height: clamp(12px, 1.1vw, 15px);
+    width: 10px;
+    height: 18px;
     background: var(--yellow);
     vertical-align: middle;
     animation: blink 1s step-end infinite;
@@ -149,7 +138,7 @@
   .cta-row {
     display: flex;
     gap: 16px;
-    margin-top: clamp(10px, 1.5vh, 20px);
+    margin-top: 24px;
     opacity: 0;
     transform: translateY(6px);
     transition: opacity 0.4s ease, transform 0.4s ease;
@@ -162,8 +151,8 @@
 
   .cta-btn {
     font-family: var(--mono);
-    font-size: clamp(11px, 1vw, 13px);
-    padding: clamp(8px, 0.8vh, 11px) clamp(20px, 2vw, 28px);
+    font-size: 15px;
+    padding: 12px 32px;
     border: 1.5px solid var(--yellow);
     background: transparent;
     color: var(--yellow);
@@ -183,15 +172,15 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 10vw;
-    height: 28px;
+    padding: 0 8vw;
+    height: 36px;
     flex-shrink: 0;
   }
 
   .status-l,
   .status-c {
     font-family: var(--mono);
-    font-size: 11px;
+    font-size: 13px;
     color: var(--dark);
     letter-spacing: 0.06em;
   }
@@ -199,7 +188,7 @@
   .status-r {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 20px;
   }
 
   .icon-btn {
@@ -216,8 +205,8 @@
   .icon-btn:hover { opacity: 1; }
 
   .icon-btn svg {
-    width: 14px;
-    height: 14px;
+    width: 18px;
+    height: 18px;
     fill: var(--dark);
   }
 
@@ -237,8 +226,8 @@
   .modal {
     background: var(--bg);
     border: 1px solid var(--yellow);
-    padding: clamp(28px, 3vw, 44px) clamp(28px, 3vw, 44px);
-    width: min(580px, 92vw);
+    padding: 40px;
+    width: min(600px, 92vw);
     font-family: var(--mono);
     animation: modalIn 0.2s ease;
   }
@@ -257,7 +246,7 @@
 
   .modal-title {
     color: var(--yellow);
-    font-size: clamp(12px, 1.1vw, 14px);
+    font-size: 15px;
     font-weight: 700;
   }
 
@@ -266,7 +255,7 @@
     border: none;
     color: var(--comment);
     font-family: var(--mono);
-    font-size: 12px;
+    font-size: 13px;
     cursor: pointer;
     transition: color 0.15s;
   }
@@ -274,14 +263,14 @@
   .modal-close:hover { color: var(--body); }
 
   .field {
-    margin-bottom: 18px;
+    margin-bottom: 20px;
   }
 
   .field label {
     display: block;
     color: var(--comment);
-    font-size: 11px;
-    margin-bottom: 6px;
+    font-size: 13px;
+    margin-bottom: 8px;
     line-height: 1.5;
   }
 
@@ -292,8 +281,8 @@
     border: 1px solid var(--border);
     color: var(--body);
     font-family: var(--mono);
-    font-size: 12px;
-    padding: 9px 12px;
+    font-size: 13px;
+    padding: 10px 14px;
     outline: none;
     transition: border-color 0.15s;
     border-radius: 0;
@@ -313,7 +302,7 @@
 
   .field textarea {
     resize: vertical;
-    min-height: 72px;
+    min-height: 80px;
   }
 
   .modal-footer {
@@ -326,14 +315,14 @@
 
   .modal-submit {
     font-family: var(--mono);
-    font-size: 12px;
-    padding: 9px 24px;
+    font-size: 13px;
+    padding: 10px 28px;
     border: 1.5px solid var(--yellow);
     background: transparent;
     color: var(--yellow);
     cursor: pointer;
     transition: all 0.15s;
-    min-width: 110px;
+    min-width: 120px;
     white-space: nowrap;
   }
 
@@ -344,30 +333,33 @@
 
   .success-msg {
     color: var(--comment);
-    font-size: 12px;
+    font-size: 13px;
     display: none;
     font-family: var(--mono);
   }
 
   /* ── MOBILE ── */
   @media (max-width: 768px) {
+    html, body { overflow-y: auto; height: auto; }
+    .ide { height: auto; min-height: 100vh; }
     .main {
-      padding: 32px 6vw 24px 6vw;
+      padding: 24px 5vw 20px 5vw;
+      overflow: visible;
       justify-content: flex-start;
-      overflow-y: auto;
     }
-
-    html, body { overflow: auto; }
-
-    .line { white-space: pre-wrap; }
-
-    .status-bar { padding: 0 6vw; }
-
+    .line { font-size: 14px; padding-right: 0; }
+    .logo-corner { width: 56px; height: 56px; top: 20px; right: 5vw; }
+    .status-bar { padding: 0 5vw; height: 44px; }
     .status-c { display: none; }
-
+    .status-l, .status-c { font-size: 12px; }
+    .icon-btn svg { width: 20px; height: 20px; }
     .cta-row { flex-direction: column; gap: 12px; }
-
-    .cta-btn { text-align: center; }
+    .cta-btn { text-align: center; font-size: 14px; }
+    .tab { font-size: 13px; }
+    .modal { padding: 24px 20px; }
+    .modal-title { font-size: 13px; }
+    .field label { font-size: 12px; }
+    .field input, .field textarea { font-size: 12px; }
   }
 </style>
 </head>
