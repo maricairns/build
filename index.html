@@ -577,28 +577,15 @@
     }
   });
 
-  // Form submission via mailto
+  // Form submission via Formspree
   function handleSubmit(type) {
-    var name    = document.getElementById(type + '-name').value.trim();
-    var org     = document.getElementById(type + '-org').value.trim();
-    var link    = document.getElementById(type + '-link').value.trim();
-    var msg     = document.getElementById(type + '-msg').value.trim();
-    var email   = document.getElementById(type + '-email').value.trim();
+    var name  = document.getElementById(type + '-name').value.trim();
+    var org   = document.getElementById(type + '-org').value.trim();
+    var link  = document.getElementById(type + '-link').value.trim();
+    var msg   = document.getElementById(type + '-msg').value.trim();
+    var email = document.getElementById(type + '-email').value.trim();
 
-    if (!name || !link || !msg || !email) {
-      return;
-    }
-
-    var subject = type === 'work'
-      ? 'Work with Me — ' + name
-      : 'Fund this Work — ' + name;
-
-    var body = '';
-    body += 'Name: ' + name + '\n';
-    if (org) body += 'Organisation: ' + org + '\n';
-    body += 'Link: ' + link + '\n';
-    body += (type === 'work' ? 'What are you looking for?' : 'Message') + ':\n' + msg + '\n';
-    body += 'Reply to: ' + email;
+    if (!name || !link || !msg || !email) return;
 
     var btn = document.getElementById('submit-' + type);
     btn.textContent = '[ >>> running... ]';
@@ -606,16 +593,32 @@
     btn.style.color = '#7b7a77';
     btn.style.cursor = 'default';
 
-    setTimeout(function() {
-      window.open('mailto:mari.cairns@gmail.com'
-        + '?subject=' + encodeURIComponent(subject)
-        + '&body=' + encodeURIComponent(body));
+    var endpoint = type === 'work'
+      ? 'https://formspree.io/f/mojkooye'
+      : 'https://formspree.io/f/maqpggvk';
 
+    fetch(endpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        name: name,
+        organisation: org,
+        link: link,
+        message: msg,
+        email: email
+      })
+    })
+    .then(function(res) {
       btn.textContent = '[ \u2713 done ]';
       btn.style.borderColor = '#e2e2e2';
       btn.style.color = '#e2e2e2';
       document.getElementById('success-' + type).style.display = 'block';
-    }, 1200);
+    })
+    .catch(function() {
+      btn.textContent = '[ ! error ]';
+      btn.style.borderColor = '#e2e2e2';
+      btn.style.color = '#e2e2e2';
+    });
   }
 </script>
 </body>
