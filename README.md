@@ -29,10 +29,6 @@ existential.
 
 Two routes in: **Work with Me** and **Fund this Work**.
 
-> We Are Building AI For 8.28+ Billion Humans.
->
-> How We Build AI Matters. How We Use AI Matters.
-
 
 ---
 
